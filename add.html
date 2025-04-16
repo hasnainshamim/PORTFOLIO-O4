@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Blog Post</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bfc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .success, .error {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Blog Post</h2>
+    <form id="blogForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" required />
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea id="content" rows="6" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Blog Image</label>
+        <input type="file" id="image" accept="image/*" required />
+      </div>
+
+      <button type="submit">Post Blog</button>
+      <div class="success" style="display:none;">Blog posted successfully!</div>
+      <div class="error" style="display:none;">Failed to post blog.</div>
+    </form>
+  </div>
+
+  <script type="module">
+
+if(localStorage.getItem("verify") == "false"){
+  window.location.href = "index.html";
+}
+
+    import { db, collection, addDoc } from "./assets/config/config.js";
+
+    const form = document.getElementById("blogForm");
+    const successMsg = document.querySelector(".success");
+    const errorMsg = document.querySelector(".error");
+
+    // ✅ Replace with your actual Cloudinary info
+    const cloudName = "dgqilf65p"; // Your Cloudinary Cloud Name
+    const uploadPreset = "blog_upload_preset"; // Your unsigned upload preset name
+
+    async function uploadImage(file) {
+      const url = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", uploadPreset);
+
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await res.json();
+
+        if (data.secure_url) {
+          return data.secure_url;
+        } else {
+          throw new Error(data.error?.message || "Upload failed");
+        }
+      } catch (err) {
+        console.error("Cloudinary upload error:", err);
+        throw err;
+      }
+    }
+
+    async function addBlogPost(e) {
+      e.preventDefault();
+
+      const title = document.getElementById("title").value;
+      const content = document.getElementById("content").value;
+      const imageFile = document.getElementById("image").files[0];
+
+      try {
+        const imageUrl = await uploadImage(imageFile); // ✅ Upload to Cloudinary
+
+        await addDoc(collection(db, "blogs"), {
+          title,
+          content,
+          imageUrl,
+          createdAt: new Date()
+        });
+
+        successMsg.style.display = "block";
+        errorMsg.style.display = "none";
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        errorMsg.style.display = "block";
+        successMsg.style.display = "none";
+      }
+    }
+
+    form.addEventListener("submit", addBlogPost);
+  </script>
+</body>
+</html>

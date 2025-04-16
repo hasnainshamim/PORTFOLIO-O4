@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Blog Posts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .blog-image {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .blog-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .edit-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+    }
+    .add-btn {
+      background-color: #2196F3;
+      color: white;
+      padding: 10px 20px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 600px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Manage Blog Posts</h1>
+      <button class="add-btn" id="addBlogBtn">+ Add New Blog</button>
+    </div>
+    
+    <div id="blogsContainer"></div>
+  </div>
+
+  <!-- Edit/Create Modal -->
+  <div class="modal" id="blogModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Edit Blog Post</h2>
+      <form id="blogForm">
+        <input type="hidden" id="blogId">
+        
+        <div class="form-group">
+          <label for="editTitle">Title</label>
+          <input type="text" id="editTitle" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="editContent">Content</label>
+          <textarea id="editContent" rows="6" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="editImage">Blog Image</label>
+          <input type="file" id="editImage" accept="image/*">
+          <img id="currentImage" style="max-width: 100px; margin-top: 10px; display: none;">
+        </div>
+        
+        <div class="modal-actions">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button type="submit" id="saveBtn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    if(localStorage.getItem("verify") == "false"){
+  window.location.href = "index.html";
+}
+    import { db, collection, getDocs, doc, updateDoc, deleteDoc, addDoc } from "./assets/config/config.js";
+
+    // DOM Elements
+    const blogsContainer = document.getElementById('blogsContainer');
+    const blogModal = document.getElementById('blogModal');
+    const blogForm = document.getElementById('blogForm');
+    const modalTitle = document.getElementById('modalTitle');
+    const addBlogBtn = document.getElementById('addBlogBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    
+    // Cloudinary Configuration
+    const cloudName = "dgqilf65p";
+    const uploadPreset = "blog_upload_preset";
+
+    // Current state
+    let currentBlogId = null;
+    let isEditMode = false;
+
+    // Fetch all blogs
+    async function fetchBlogs() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "blogs"));
+        blogsContainer.innerHTML = '';
+        
+        querySnapshot.forEach((doc) => {
+          const blog = doc.data();
+          renderBlogCard(doc.id, blog);
+        });
+      } catch (error) {
+        console.error("Error fetching blogs: ", error);
+      }
+    }
+
+    // Render blog card
+    function renderBlogCard(id, blog) {
+      const blogCard = document.createElement('div');
+      blogCard.className = 'blog-card';
+      blogCard.innerHTML = `
+        <h2>${blog.title}</h2>
+        <p>${blog.content.substring(0, 100)}...</p>
+        ${blog.imageUrl ? `<img src="${blog.imageUrl}" class="blog-image">` : ''}
+        <div class="blog-actions">
+          <button class="edit-btn" data-id="${id}">Edit</button>
+          <button class="delete-btn" data-id="${id}">Delete</button>
+        </div>
+      `;
+      blogsContainer.appendChild(blogCard);
+      
+      // Add event listeners
+      blogCard.querySelector('.edit-btn').addEventListener('click', () => openEditModal(id, blog));
+      blogCard.querySelector('.delete-btn').addEventListener('click', () => deleteBlog(id));
+    }
+
+    // Open edit modal
+    function openEditModal(id, blog) {
+      isEditMode = true;
+      currentBlogId = id;
+      modalTitle.textContent = 'Edit Blog Post';
+      document.getElementById('blogId').value = id;
+      document.getElementById('editTitle').value = blog.title;
+      document.getElementById('editContent').value = blog.content;
+      
+      const currentImage = document.getElementById('currentImage');
+      if (blog.imageUrl) {
+        currentImage.src = blog.imageUrl;
+        currentImage.style.display = 'block';
+      } else {
+        currentImage.style.display = 'none';
+      }
+      
+      blogModal.style.display = 'flex';
+    }
+
+    // Open create modal
+    function openCreateModal() {
+      isEditMode = false;
+      currentBlogId = null;
+      modalTitle.textContent = 'Create New Blog Post';
+      blogForm.reset();
+      document.getElementById('currentImage').style.display = 'none';
+      blogModal.style.display = 'flex';
+    }
+
+    // Upload image to Cloudinary
+    async function uploadImage(file) {
+      const url = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", uploadPreset);
+
+      const res = await fetch(url, {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      return data.secure_url;
+    }
+
+    // Save blog (create or update)
+    async function saveBlog(e) {
+      e.preventDefault();
+      
+      const title = document.getElementById('editTitle').value;
+      const content = document.getElementById('editContent').value;
+      const imageFile = document.getElementById('editImage').files[0];
+      
+      try {
+        let imageUrl = document.getElementById('currentImage').src;
+        
+        // Upload new image if selected
+        if (imageFile) {
+          imageUrl = await uploadImage(imageFile);
+        }
+        
+        const blogData = {
+          title,
+          content,
+          imageUrl,
+          updatedAt: new Date()
+        };
+        
+        if (isEditMode) {
+          // Update existing blog
+          await updateDoc(doc(db, "blogs", currentBlogId), blogData);
+        } else {
+          // Create new blog
+          blogData.createdAt = new Date();
+          await addDoc(collection(db, "blogs"), blogData);
+        }
+        
+        blogModal.style.display = 'none';
+        fetchBlogs();
+      } catch (error) {
+        console.error("Error saving blog: ", error);
+      }
+    }
+
+    // Delete blog
+    async function deleteBlog(id) {
+      if (confirm('Are you sure you want to delete this blog post?')) {
+        try {
+          await deleteDoc(doc(db, "blogs", id));
+          fetchBlogs();
+        } catch (error) {
+          console.error("Error deleting blog: ", error);
+        }
+      }
+    }
+
+    // Event Listeners
+    addBlogBtn.addEventListener('click', openCreateModal);
+    cancelBtn.addEventListener('click', () => blogModal.style.display = 'none');
+    blogForm.addEventListener('submit', saveBlog);
+
+    // Initialize
+    fetchBlogs();
+  </script>
+</body>
+</html>
