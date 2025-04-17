@@ -242,6 +242,9 @@ Version      : 1.0
         overflow-x: hidden;
 
     }
+        .single-page-hero-area h2 {
+        font-size: 60px;
+    }
     .hero-image img { width: 230px;}
 .single-page-hero-area h2 {
         font-size: 90px;
