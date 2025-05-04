@@ -2874,7 +2874,8 @@ body.loaded {
     overflow: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    border-radius: 0.5em
+    border-radius: 0.5em;
+    max-height: 70vh;
 }
 
 .blog-post-box .blog-post-img img {
