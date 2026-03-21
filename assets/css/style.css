@@ -457,6 +457,7 @@ html {
     transition: .3s;
     background: transparent;
 }
+
 .theme-btn-two:hover {
     border: 1px solid var(--border-color);
     text-decoration: none;
@@ -832,7 +833,7 @@ html {
 }
 
 .logo img {
-    width: 70px;
+    width: 60px;
 }
 
 .main-menu {
@@ -1353,6 +1354,7 @@ html {
 
 .clienti-reviews .clienti-profile li img {
     border-radius: 100%;
+    filter: grayscale(1);
 }
 
 .clienti-reviews .clienti-profile li:first-child {
@@ -1589,15 +1591,22 @@ h2.about-pre-title {
 
 .service-item {
     position: relative;
-    padding: 60px 40px;
+    padding: 30px 25px;
     border-radius: 20px;
     border: 1px solid var(--border-color);
     background: var(--lighter-color);
     margin-bottom: 30px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    height: stretch;
 }
-
+.service-item img {
+    max-width: 100%;
+    display: block;
+    border-radius: 15px;
+    width: 100px;
+    height: 110px;
+}
 
 .service-item:hover.service-item h5 {
     color: var(--primary-color);
@@ -1608,7 +1617,7 @@ h2.about-pre-title {
 
 
 .service-item h5 {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     color: rgb(119, 119, 125);
     font-family: var(--text-font);
     border: 1px solid;
@@ -2318,12 +2327,14 @@ ul.extra-skills li i {
     padding-bottom: 100px;
     background: var(--primary-color);
 }
+
 .contact-form-area {
     padding: 50px 30px 20px 40px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-        background: var(--lighter-color);
+    background: var(--lighter-color);
 }
+
 .contact-form-area .form-group {
     margin-bottom: 32px;
 }
@@ -2349,7 +2360,7 @@ ul.extra-skills li i {
     font-family: var(--text-font);
 }
 
-.contact-form-area .form-group input[type=text]{
+.contact-form-area .form-group input[type=text] {
     color: var(--main-color);
 }
 
@@ -2410,8 +2421,8 @@ ul.extra-skills li i {
     padding-bottom: 20px;
 }
 
-.single-contact p{
-     color: rgb(119, 119, 125);
+.single-contact p {
+    color: rgb(119, 119, 125);
 }
 
 
@@ -2431,7 +2442,7 @@ ul.extra-skills li i {
     padding: 50px 30px 20px 40px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-        background: var(--lighter-color);
+    background: var(--lighter-color);
 }
 
 .contact-page-content h6 {
@@ -2537,11 +2548,12 @@ p.copy-right-text {
     text-align: center;
 }
 
-.footer-top{
-padding-top: 100px;
- padding-bottom: 100px;
+.footer-top {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-.footer-top p{
+
+.footer-top p {
 
     color: var(--main-color);
     font-size: 20px;
@@ -3452,10 +3464,10 @@ ul.blog_pagination li a:hover {
 .scroller[data-animated="true"] {
     overflow: hidden;
     -webkit-mask: -webkit-linear-gradient(left,
-        transparent,
-        white 20%,
-        white 80%,
-        transparent);
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 

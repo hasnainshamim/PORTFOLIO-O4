@@ -491,3 +491,6 @@ async function addData(e) {
 window.addData = addData; // Expose the function to the global scope
 
 
+// footer year 
+let datetracker = new Date()
+document.getElementById("yearx").innerText =  datetracker.getFullYear()
