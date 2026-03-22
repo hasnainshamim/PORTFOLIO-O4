@@ -248,7 +248,7 @@ Version      : 1.0
     }
 
     .hero-image img {
-        width: 230px;
+        width: 250px;
     }
 
     .single-page-hero-area h2 {
@@ -902,12 +902,26 @@ Version      : 1.0
         height: 30px;
         width: 30px;
     }
-    .main-hero-area{
+
+    .main-hero-area {
         padding-bottom: 80px;
     }
-        .hero-counter-area {
+
+    .hero-counter-area {
         padding-left: 5px;
         padding-right: 15px;
+    }
+
+    .company-design-area .scroller__inner img {
+        width: 200px !important;
+    }
+
+    .company-design-area .scroller__inner {
+        gap: 0rem !important;
+    }
+
+    .service-item img {
+        width: 110px
     }
 }
 
