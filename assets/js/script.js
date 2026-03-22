@@ -494,3 +494,17 @@ window.addData = addData; // Expose the function to the global scope
 // footer year 
 let datetracker = new Date()
 document.getElementById("yearx").innerText =  datetracker.getFullYear()
+
+    var swiper = new Swiper(".certificate-slider", {
+          slidesPerView: 'auto',
+            spaceBetween: 20,
+            autoplay: true,
+         breakpoints: {
+                0: { slidesPerView: 1, spaceBetween: 16 },
+                768: { slidesPerView: 1.5, spaceBetween: 20 },
+                1024: { slidesPerView: 2, spaceBetween: 20 },
+                1300: { slidesPerView: 1.9, spaceBetween: 20 }
+            }
+
+      
+    });

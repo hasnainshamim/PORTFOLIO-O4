@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Muhammad Hussain Shamim - Professional Frontend Developer specializing in React, JavaScript & modern web development. Building fast, responsive websites with clean code and creative solutions.">
-    <meta name="keywords" content="Hussain Shamim, Muhammad Hussain, Muhammad Hussain Shamim,frontend developer, web developer, React developer, JavaScript developer, portfolio website, responsive design, HTML CSS JavaScript, web development services, freelance developer, Pakistan developer">
+    <meta name="description"
+        content="Muhammad Hussain Shamim – Expert Frontend Developer & CMS Specialist. Specializing in React, WordPress, and Shopify customization. I build high-performance, GSAP-animated, and responsive websites. Let’s turn your vision into a digital reality with clean, scalable code.">
+    <meta name="keywords"
+        content="Hussain Shamim, Muhammad Hussain, Muhammad Hussain Shamim,frontend developer, web developer, React developer, JavaScript developer, portfolio website, responsive design, HTML CSS JavaScript, web development services, freelance developer, Pakistan developer,cms developer,wordpress,shopify,developer,software,frontend,backend,wordpress developer,shopify developer">
     <meta name="author" content="Muhammad Hussain Shamim">
     <meta name="google-site-verification" content="hmwqEqbGPhBoIHp32ZPvwHz6RzesO3-6WAszd-pu3Dk" />
     <!-- PAGE TITLE -->
@@ -21,6 +23,10 @@
         rel="stylesheet">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--- swiper js  --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- FONT AWESOME CSS -->
     <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
     <!-- FONT AWESOME CSS -->
@@ -41,6 +47,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- RESPONSIVE CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -90,7 +97,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-6 col-6 col-sm-3">
                             <div class="logo-area">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/images/m. hussain shamim.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/images/m. hussain shamim.png" alt="hussain shamim"></a>
                                 </div>
                             </div>
                         </div>
@@ -98,16 +105,10 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li><a href="index.html" class="linkstyle">Home</a></li>
+                                        <li><a href="#home" class="linkstyle">Home</a></li>
                                         <li><a href="#about" class="linkstyle">about</a></li>
-                                        <li><a href="#services" class="linkstyle">services</a></li>
+                                        <li><a href="#services" class="linkstyle">Skills</a></li>
                                         <li><a href="#portfolio" class="linkstyle">portfolio</a></li>
-                                        <!-- <li class="has-dropdown"><a href="projects.html" class="linkstyle">projects</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="projects.html">Projects List</a></li>
-                                                <li><a href="single-project.html">Single Portfolio</a></li>
-                                            </ul>
-                                        </li> -->
                                         <li><a href="blog.html" class="linkstyle">Blog</a></li>
                                         <li><a href="#contact" class="linkstyle">Contact</a></li>
                                     </ul>
@@ -158,17 +159,21 @@
                         <div class="clienti-reviews">
                             <ul class="clienti-profile">
                                 <li>
-                                    <img class="img-fluid" src="assets/images/testimonials/s.png" alt="client" style="width:50px">
+                                    <img class="img-fluid" src="assets/images/testimonials/s.png" alt="client"
+                                        style="width:50px">
                                 </li>
                                 <li>
-                                    <img class="img-fluid" src="assets/images/testimonials/j.png" alt="client" style="width:50px">
+                                    <img class="img-fluid" src="assets/images/testimonials/j.png" alt="client"
+                                        style="width:50px">
                                 </li>
                                 <li>
-                                    <img class="img-fluid" src="assets/images/testimonials/f.png" alt="client" style="width:50px">
+                                    <img class="img-fluid" src="assets/images/testimonials/f.png" alt="client"
+                                        style="width:50px">
                                 </li>
                             </ul>
                             <div class="reviews">Project Excellence <span>(100%)</span>
-                            <p>Dedicated to turning complex designs into functional websites.</p></div>
+                                <p>Dedicated to turning complex designs into functional websites.</p>
+                            </div>
                         </div>
                     </div>
                     <!-- / END HERO DESIGN AREA -->
@@ -181,8 +186,12 @@
                 </div>
                 <div class="col-lg-3 pt-30">
                     <div class="hero-content wow fadeInUp delay-0-4s">
-                        <p>Hi, I'm Muhammad Hussain Shamim, a Frontend Developer specialized in building responsive, high-performance, and modern web applications. A passionate coder</p>
-                        <a class="theme-btn" href="#contact">Get In touch</a>
+                        <p>Hi, I'm Muhammad Hussain Shamim, a Frontend Developer specialized in building responsive,
+                            high-performance, and modern web applications. A passionate coder</p>
+                        <a class="theme-btn" target="_blank" href="assets/pdf/resume-me.pdf">
+                            Resume 
+                        <i class="ri-arrow-down-line"></i>
+                        </a>
                     </div>
                     <!-- / END HERO DESIGN AREA -->
                 </div>
@@ -199,23 +208,35 @@
                     <div class="company-list">
                         <div class="scroller" data-direction="left" data-speed="slow">
                             <div class="scroller__inner">
-                                <a href="https://www.google.com/search?q=solutions+gram&rlz=1C1GCEB_enPK1111PK1111&oq=sol&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgYIARBFGDsyBggCECMYJzIGCAMQRRg5MhMIBBAuGMcBGJECGNEDGIAEGIoFMhMIBRAuGK8BGMcBGJECGIAEGIoFMhMIBhAuGIMBGMcBGLEDGNEDGIAEMgYIBxBFGD3SAQc4NzlqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">
-                                <img src="assets/images/client-logos/solutionsgram.png" alt="Company" style="width: 320px;"/>
+                                <a href="https://www.google.com/search?q=solutions+gram&rlz=1C1GCEB_enPK1111PK1111&oq=sol&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgYIARBFGDsyBggCECMYJzIGCAMQRRg5MhMIBBAuGMcBGJECGNEDGIAEGIoFMhMIBRAuGK8BGMcBGJECGIAEGIoFMhMIBhAuGIMBGMcBGLEDGNEDGIAEMgYIBxBFGD3SAQc4NzlqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                                    target="_blank">
+                                    <img src="assets/images/client-logos/solutionsgram.png" alt="Company"
+                                        style="width: 320px;" />
                                 </a>
-                                <a href="https://www.google.com/search?q=bakhshish+associate&rlz=1C1GCEB_enPK1111PK1111&oq=bak&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MgYIABBFGDkyCAgBEEUYJxg7Mg0IAhAuGJECGIAEGIoFMg0IAxAAGJECGIAEGIoFMgoIBBAuGLEDGIAEMgoIBRAAGLEDGIAEMgYIBhBFGDwyBggHEEUYPNIBCDcyODFqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8" target="_blank">
-                                <img src="assets/images/client-logos/BAKHSHISH ASSOCIATES.png" alt="Company" style="width: 320px;"/>
+                                <a href="https://www.google.com/search?q=bakhshish+associate&rlz=1C1GCEB_enPK1111PK1111&oq=bak&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MgYIABBFGDkyCAgBEEUYJxg7Mg0IAhAuGJECGIAEGIoFMg0IAxAAGJECGIAEGIoFMgoIBBAuGLEDGIAEMgoIBRAAGLEDGIAEMgYIBhBFGDwyBggHEEUYPNIBCDcyODFqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8"
+                                    target="_blank">
+                                    <img src="assets/images/client-logos/BAKHSHISH ASSOCIATES.png" alt="Company"
+                                        style="width: 320px;" />
                                 </a>
-                                <a href="https://www.google.com/search?q=planet+excellence+group&sca_esv=1f1bc4ebf15b2244&rlz=1C1GCEB_enPK1111PK1111&sxsrf=ANbL-n4kEn2hp652TmPyv1PlnhXiqA3VWw%3A1774111057218&ei=Ucm-aZ_6DNDtkdUP3ae94Qg&biw=1024&bih=641&oq=planet+excelence+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXBsYW5ldCBleGNlbGVuY2UgKgIIATIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMggQABgWGB4YCjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgeGAoyBhAAGBYYHkiCaFD0CVjrVnAEeACQAQCYAZsCoAHgHKoBBTAuOS45uAEDyAEA-AEBmAIWoAKyH8ICCxAAGIkFGKIEGLADwgIIEAAY7wUYsAPCAgsQABiABBiiBBiwA8ICERAuGIAEGIoFGJECGMcBGNEDwgILEAAYgAQYigUYkQLCAgoQLhiABBiKBRhDwgIKEAAYgAQYigUYQ8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAggQABiABBixA8ICCxAuGIAEGLEDGIMBwgIIEC4YgAQYsQPCAg0QABiABBiKBRhDGLEDwgIREC4YgAQYigUYkQIYxwEYrwHCAhAQABiABBiKBRhDGLEDGIMBwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGMcBGNEDwgILEC4YgAQYxwEYrwHCAgcQABiABBgKwgIFECEYoAHCAgUQIRifBcICBhAAGB4YDcICCBAAGAgYHhgNwgIKEAAYCBgeGA0YCpgDAIgGAZAGBZIHCDQuNy4xMC4xoAf8kQGyBwgwLjcuMTAuMbgH9B7CBwgyLTYuMTUuMcgH1QGACAE&sclient=gws-wiz-serp" target="_blank">
-                                <img src="assets/images/client-logos/planet excellence.png" alt="Company" style="width: 320px; "/>
+                                <a href="https://www.google.com/search?q=planet+excellence+group&sca_esv=1f1bc4ebf15b2244&rlz=1C1GCEB_enPK1111PK1111&sxsrf=ANbL-n4kEn2hp652TmPyv1PlnhXiqA3VWw%3A1774111057218&ei=Ucm-aZ_6DNDtkdUP3ae94Qg&biw=1024&bih=641&oq=planet+excelence+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXBsYW5ldCBleGNlbGVuY2UgKgIIATIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMggQABgWGB4YCjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgeGAoyBhAAGBYYHkiCaFD0CVjrVnAEeACQAQCYAZsCoAHgHKoBBTAuOS45uAEDyAEA-AEBmAIWoAKyH8ICCxAAGIkFGKIEGLADwgIIEAAY7wUYsAPCAgsQABiABBiiBBiwA8ICERAuGIAEGIoFGJECGMcBGNEDwgILEAAYgAQYigUYkQLCAgoQLhiABBiKBRhDwgIKEAAYgAQYigUYQ8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAggQABiABBixA8ICCxAuGIAEGLEDGIMBwgIIEC4YgAQYsQPCAg0QABiABBiKBRhDGLEDwgIREC4YgAQYigUYkQIYxwEYrwHCAhAQABiABBiKBRhDGLEDGIMBwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGMcBGNEDwgILEC4YgAQYxwEYrwHCAgcQABiABBgKwgIFECEYoAHCAgUQIRifBcICBhAAGB4YDcICCBAAGAgYHhgNwgIKEAAYCBgeGA0YCpgDAIgGAZAGBZIHCDQuNy4xMC4xoAf8kQGyBwgwLjcuMTAuMbgH9B7CBwgyLTYuMTUuMcgH1QGACAE&sclient=gws-wiz-serp"
+                                    target="_blank">
+                                    <img src="assets/images/client-logos/planet excellence.png" alt="Company"
+                                        style="width: 320px; " />
                                 </a>
-                                <a href="https://www.google.com/search?sca_esv=1f1bc4ebf15b2244&rlz=1C1GCEB_enPK1111PK1111&sxsrf=ANbL-n7PJlrJnNpCARDzQDhKZOlH38_zlg:1774111160055&q=devstren&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-R5R-93bnJN-gfJetFY0A5MvUJsyueWSBx9Ta_hLqYc2V9IW2SS1DH0kkLcXn9XGcDBmY67XyRkHeoDXO3kwAgpfFFVozZz1F7lfAlWRgOfm4Tu3RBqkJnxCCDKCwlT2gLueHOc&sa=X&ved=2ahUKEwiwy_KLt7GTAxW-K_sDHVgtLHMQ0pQJegQICxAB&biw=1024&bih=641&dpr=1" target="_blank">
-                                <img src="assets/images/client-logos/devstren.png" alt="Company" style="width: 320px; "/>
+                                <a href="https://www.google.com/search?sca_esv=1f1bc4ebf15b2244&rlz=1C1GCEB_enPK1111PK1111&sxsrf=ANbL-n7PJlrJnNpCARDzQDhKZOlH38_zlg:1774111160055&q=devstren&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-R5R-93bnJN-gfJetFY0A5MvUJsyueWSBx9Ta_hLqYc2V9IW2SS1DH0kkLcXn9XGcDBmY67XyRkHeoDXO3kwAgpfFFVozZz1F7lfAlWRgOfm4Tu3RBqkJnxCCDKCwlT2gLueHOc&sa=X&ved=2ahUKEwiwy_KLt7GTAxW-K_sDHVgtLHMQ0pQJegQICxAB&biw=1024&bih=641&dpr=1"
+                                    target="_blank">
+                                    <img src="assets/images/client-logos/devstren.png" alt="Company"
+                                        style="width: 320px; " />
                                 </a>
-                                <a href="https://www.google.com/search?q=solutions+gram&rlz=1C1GCEB_enPK1111PK1111&oq=sol&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgYIARBFGDsyBggCECMYJzIGCAMQRRg5MhMIBBAuGMcBGJECGNEDGIAEGIoFMhMIBRAuGK8BGMcBGJECGIAEGIoFMhMIBhAuGIMBGMcBGLEDGNEDGIAEMgYIBxBFGD3SAQc4NzlqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">
-                                <img src="assets/images/client-logos/solutionsgram.png" alt="Company" style="width: 320px; "/>
+                                <a href="https://www.google.com/search?q=solutions+gram&rlz=1C1GCEB_enPK1111PK1111&oq=sol&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgYIARBFGDsyBggCECMYJzIGCAMQRRg5MhMIBBAuGMcBGJECGNEDGIAEGIoFMhMIBRAuGK8BGMcBGJECGIAEGIoFMhMIBhAuGIMBGMcBGLEDGNEDGIAEMgYIBxBFGD3SAQc4NzlqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                                    target="_blank">
+                                    <img src="assets/images/client-logos/solutionsgram.png" alt="Company"
+                                        style="width: 320px; " />
                                 </a>
-                                <a href="https://www.google.com/search?q=planet+excellence+group&sca_esv=1f1bc4ebf15b2244&rlz=1C1GCEB_enPK1111PK1111&sxsrf=ANbL-n4kEn2hp652TmPyv1PlnhXiqA3VWw%3A1774111057218&ei=Ucm-aZ_6DNDtkdUP3ae94Qg&biw=1024&bih=641&oq=planet+excelence+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXBsYW5ldCBleGNlbGVuY2UgKgIIATIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMggQABgWGB4YCjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgeGAoyBhAAGBYYHkiCaFD0CVjrVnAEeACQAQCYAZsCoAHgHKoBBTAuOS45uAEDyAEA-AEBmAIWoAKyH8ICCxAAGIkFGKIEGLADwgIIEAAY7wUYsAPCAgsQABiABBiiBBiwA8ICERAuGIAEGIoFGJECGMcBGNEDwgILEAAYgAQYigUYkQLCAgoQLhiABBiKBRhDwgIKEAAYgAQYigUYQ8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAggQABiABBixA8ICCxAuGIAEGLEDGIMBwgIIEC4YgAQYsQPCAg0QABiABBiKBRhDGLEDwgIREC4YgAQYigUYkQIYxwEYrwHCAhAQABiABBiKBRhDGLEDGIMBwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGMcBGNEDwgILEC4YgAQYxwEYrwHCAgcQABiABBgKwgIFECEYoAHCAgUQIRifBcICBhAAGB4YDcICCBAAGAgYHhgNwgIKEAAYCBgeGA0YCpgDAIgGAZAGBZIHCDQuNy4xMC4xoAf8kQGyBwgwLjcuMTAuMbgH9B7CBwgyLTYuMTUuMcgH1QGACAE&sclient=gws-wiz-serp" target="_blank">
-                                <img src="assets/images/client-logos/planet excellence.png" alt="Company" style="width: 320px; "/>
+                                <a href="https://www.google.com/search?q=planet+excellence+group&sca_esv=1f1bc4ebf15b2244&rlz=1C1GCEB_enPK1111PK1111&sxsrf=ANbL-n4kEn2hp652TmPyv1PlnhXiqA3VWw%3A1774111057218&ei=Ucm-aZ_6DNDtkdUP3ae94Qg&biw=1024&bih=641&oq=planet+excelence+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXBsYW5ldCBleGNlbGVuY2UgKgIIATIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMggQABgWGB4YCjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgeGAoyBhAAGBYYHkiCaFD0CVjrVnAEeACQAQCYAZsCoAHgHKoBBTAuOS45uAEDyAEA-AEBmAIWoAKyH8ICCxAAGIkFGKIEGLADwgIIEAAY7wUYsAPCAgsQABiABBiiBBiwA8ICERAuGIAEGIoFGJECGMcBGNEDwgILEAAYgAQYigUYkQLCAgoQLhiABBiKBRhDwgIKEAAYgAQYigUYQ8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAggQABiABBixA8ICCxAuGIAEGLEDGIMBwgIIEC4YgAQYsQPCAg0QABiABBiKBRhDGLEDwgIREC4YgAQYigUYkQIYxwEYrwHCAhAQABiABBiKBRhDGLEDGIMBwgIFEAAYgATCAgUQLhiABMICCxAuGIAEGMcBGNEDwgILEC4YgAQYxwEYrwHCAgcQABiABBgKwgIFECEYoAHCAgUQIRifBcICBhAAGB4YDcICCBAAGAgYHhgNwgIKEAAYCBgeGA0YCpgDAIgGAZAGBZIHCDQuNy4xMC4xoAf8kQGyBwgwLjcuMTAuMbgH9B7CBwgyLTYuMTUuMcgH1QGACAE&sclient=gws-wiz-serp"
+                                    target="_blank">
+                                    <img src="assets/images/client-logos/planet excellence.png" alt="Company"
+                                        style="width: 320px; " />
                                 </a>
                             </div>
                         </div>
@@ -226,7 +247,7 @@
     </div>
     <!-- // END COMPANY DESIGN AREA -->
     <!-- START ABOUT DESIGN AREA -->
-    <section  class="about-area">
+    <section class="about-area">
         <div class="container">
             <div class="row">
                 <!-- START ABOUT TEXT DESIGN AREA -->
@@ -235,7 +256,10 @@
                 </div>
                 <div class="col-lg-9 col-sm-9">
                     <div class="about-content-part wow fadeInUp delay-0-2s">
-                        <p>I'm Muhammad Hussain Shamim a versatile Frontend Developer and CMS Specialist. I build responsive, high-speed websites using HTML, CSS, JavaScript, and Bootstrap. Beyond custom coding with React, I excel in WordPress and Shopify customization to deliver powerful, user-friendly digital solutions.</p>
+                        <p>I'm Muhammad Hussain Shamim a versatile Frontend Developer and CMS Specialist. I build
+                            responsive, high speed websites using HTML, CSS, JavaScript, and Bootstrap. Beyond custom
+                            coding with React, I excel in WordPress and Shopify customization to deliver powerful,
+                            user-friendly digital solutions.</p>
                     </div>
                     <!-- START COUNTER DESIGN AREA -->
                     <div class="hero-counter-area d-flex justify-content-between wow fadeInUp delay-0-4s">
@@ -277,7 +301,9 @@
                         <h5>01</h5>
                         <img src="./assets/images/skills/html css.png" alt="skillimage">
                         <h4>Web Foundations</h4>
-                        <p>Building semantic, accessible, and SEO-friendly web structures. Expert in modern layouts using CSS Flexbox and Grid for pixel-perfect designs. Ensuring cross-browser compatibility and smooth user experiences across all devices.
+                        <p>Building semantic, accessible, and SEO-friendly web structures. Expert in modern layouts
+                            using CSS Flexbox and Grid for pixel-perfect designs. Ensuring cross-browser compatibility
+                            and smooth user experiences across all devices.
                         </p>
                     </div>
                 </div>
@@ -289,7 +315,9 @@
                         <h5>02</h5>
                         <img src="./assets/images/skills/bootstrap.png" alt="skillimage">
                         <h4>Responsive Frameworks</h4>
-                        <p>Rapidly developing mobile-first websites with Bootstrap’s grid system and components. Customizing themes to match unique brand identities while maintaining clean code. Optimizing UI elements for faster deployment and consistency.</p>
+                        <p>Rapidly developing mobile-first websites with Bootstrap’s grid system and components.
+                            Customizing themes to match unique brand identities while maintaining clean code. Optimizing
+                            UI elements for faster deployment and consistency.</p>
                     </div>
                 </div>
                 <!-- / END SINGLE SERVICE DESIGN AREA -->
@@ -300,7 +328,9 @@
                         <h5>03</h5>
                         <img src="./assets/images/skills/javascript.png" alt="skillimage">
                         <h4>Logic & Interactivity</h4>
-                        <p>Crafting dynamic user interfaces using modern ES6+ features and asynchronous programming. Skilled in DOM manipulation and API integration to build functional web apps. Writing clean, efficient, and scalable scripts for complex tasks.</p>
+                        <p>Crafting dynamic user interfaces using modern ES6+ features and asynchronous programming.
+                            Skilled in DOM manipulation and API integration to build functional web apps. Writing clean,
+                            efficient, and scalable scripts for complex tasks.</p>
                     </div>
                 </div>
                 <!-- START SINGLE SERVICE DESIGN AREA -->
@@ -310,7 +340,9 @@
                         <h5>04</h5>
                         <img src="./assets/images/skills/react.png" alt="skillimage">
                         <h4>Modern Frontend Dev</h4>
-                        <p>Building high-performance Single Page Applications (SPAs) with reusable component architecture. Utilizing React Hooks and State Management for seamless data flow. Focused on creating fast-loading, scalable, and interactive web tools.
+                        <p>Building high-performance Single Page Applications (SPAs) with reusable component
+                            architecture. Utilizing React Hooks and State Management for seamless data flow. Focused on
+                            creating fast-loading, scalable, and interactive web tools.
                         </p>
                     </div>
                 </div>
@@ -322,7 +354,9 @@
                         <h5>05</h5>
                         <img src="./assets/images/skills/wordpress.png" alt="skillimage">
                         <h4>CMS Customization</h4>
-                        <p>Developing and managing full-scale websites with custom theme and plugin configurations. Expert in page builders like Elementor to create stunning layouts without bloat. Balancing design flexibility with backend performance and security.</p>
+                        <p>Developing and managing full-scale websites with custom theme and plugin configurations.
+                            Expert in page builders like Elementor to create stunning layouts without bloat. Balancing
+                            design flexibility with backend performance and security.</p>
                     </div>
                 </div>
                 <!-- / END SINGLE SERVICE DESIGN AREA -->
@@ -333,7 +367,9 @@
                         <h5>06</h5>
                         <img src="./assets/images/skills/shopify.png" alt="skillimage">
                         <h4>E-commerce Solutions</h4>
-                        <p>Setting up and customizing high-converting Shopify stores for global brands. Managing product catalogs, payment gateways, and liquid-based theme adjustments. Helping businesses scale with optimized checkout flows and SEO-ready stores.</p>
+                        <p>Setting up and customizing high-converting Shopify stores for global brands. Managing product
+                            catalogs, payment gateways, and liquid-based theme adjustments. Helping businesses scale
+                            with optimized checkout flows and SEO-ready stores.</p>
                     </div>
                 </div>
                 <!-- / END SINGLE SERVICE DESIGN AREA -->
@@ -343,7 +379,7 @@
     <!-- / END SERVICE DESIGN AREA -->
     <!-- START PORTFOLIO DESIGN AREA -->
     <div class="projects-area" id="portfolio">
-        
+
         <div class="container">
             <div class="custom-icon">
                 <img src="assets/images/custom/work-scribble.svg" alt="custom">
@@ -366,7 +402,7 @@
                 </div>
                 <!-- START SINGLE PORTFOLIO DESIGN AREA -->
                 <div class="col-md-6 col-xl-6 portfolio-item category-1">
-                    <a href="https://hussainshamim16.github.io/bakhshishAssociates/"  target="_blank">
+                    <a href="https://hussainshamim16.github.io/bakhshishAssociates/" target="_blank">
                         <div class="portfolio-box">
                             <!-- Image -->
                             <img src="assets/images/projects/project (4).png" alt="" data-rjs="2">
@@ -381,7 +417,7 @@
                 </div>
                 <!-- START SINGLE PORTFOLIO DESIGN AREA -->
                 <div class="col-md-6 col-xl-6 portfolio-item category-1">
-                    <a href="https://hussainshamim16.github.io/saylani-web/saylani/"  target="_blank">
+                    <a href="https://hussainshamim16.github.io/saylani-web/saylani/" target="_blank">
                         <div class="portfolio-box">
                             <!-- Image -->
                             <img src="assets/images/projects/mokups saylani.webp" alt="" data-rjs="2">
@@ -492,13 +528,6 @@
                 </div>
                 <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
             </div>
-        <div class="col-lg-12 d-flex justify-content-center pt-5"
-        style="margin-top:20px"
-        >
-            <div class="blog-post-caption">
-                <a class="theme-btn theme-btn-two" href="./projects.html">Explore Projects <i class="ri-arrow-right-line"></i></a>
-            </div>
-        </div>
         </div>
     </div>
     <!-- // END PORTFOLIO DESIGN AREA -->
@@ -508,7 +537,37 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12">
                     <div class="section-title section-black-title wow fadeInUp delay-0-2s">
-                        <h2>Testinomials</h2>
+                        <h2>Certificates</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper certificate-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/certificate/hussainshamim-smit.webp"
+                            alt="Muhammad Hussain Shamim" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/certificate/hussainshamim-microsoft.webp"
+                            alt="Muhammad Hussain Shamim" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/certificate/hussainshamim-react.webp"
+                            alt="Muhammad Hussain Shamim" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- / END TESTIMONIALS DESIGN AREA -->
+    <!-- START TESTIMONIALS DESIGN AREA -->
+    <section class="testimonials-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="section-title section-black-title wow fadeInUp delay-0-2s">
+                        <h2>Testimonials</h2>
                     </div>
                 </div>
             </div>
@@ -520,13 +579,13 @@
                             <img src="assets/images/testimonials/a.png" alt="Author" />
                         </div>
                         <div class="text">
-                            Muhammad hussain designed our Shopify store that boosted our sales by 40% in just 3 months.
+                            Muhammad hussain designed our Shopify store that boosted our sales by 95% in just 3 months.
                             His mobile optimization and checkout flow attention was outstanding. Highly recommended for
                             European markets!
                         </div>
                         <div class="testi-des">
-                            <h5>Alexandre Dubois</h5>
-                            <span>France - E-commerce Development</span>
+                            <h5>Shaheena Shumail</h5>
+                            <span>Pakistan - E-commerce Development</span>
                         </div>
                     </div>
                     <!-- / END SINGLE TESTIMONIALS DESIGN AREA -->
@@ -542,65 +601,14 @@
                             responsiveness. Muhammad Hussain Shamim understood the needs of our Asian market perfectly.
                         </div>
                         <div class="testi-des">
-                            <h5>Sarah Chen</h5>
-                            <span>Singapore - Custom Frontend Development</span>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE TESTIMONIALS DESIGN AREA -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <!-- START SINGLE TESTIMONIALS DESIGN AREA -->
-                    <div class="testimonial-item wow fadeInUp delay-0-6s">
-                        <div class="author">
-                            <img src="assets/images/testimonials/j.png" alt="Author" />
-                        </div>
-                        <div class="text">
-                            After Muhammad Hussain SEO overhaul, our organic traffic increased by 65% ​​in 4 months. His
-                            technical SEO skills are world-class. Our New York-based startup owes him a lot!
-                        </div>
-                        <div class="testi-des">
-                            <h5>James Wilson</h5>
-                            <span>USA - SEO Optimization</span>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE TESTIMONIALS DESIGN AREA -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <!-- START SINGLE TESTIMONIALS DESIGN AREA -->
-                    <div class="testimonial-item wow fadeInUp delay-0-8s">
-                        <div class="author">
-                            <img src="assets/images/testimonials/f.png" alt="Author" />
-                        </div>
-                        <div class="text">
-                            My architecture portfolio website received 3 job offers within weeks of launch. Mohamed
-                            Hussain captured my Middle Eastern design beautifully while keeping it modern.
-                        </div>
-                        <div class="testi-des">
-                            <h5>Fatima Al-Mansoori</h5>
-                            <span>UAE - Portfolio Website</span>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE TESTIMONIALS DESIGN AREA -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <!-- START SINGLE TESTIMONIALS DESIGN AREA -->
-                    <div class="testimonial-item wow fadeInUp delay-0-9s">
-                        <div class="author">
-                            <img src="assets/images/testimonials/c.png" alt="Author" />
-                        </div>
-                        <div class="text">
-                            The React dashboard developed by Mohamed transformed our São Paulo logistics business. Its
-                            performance optimizations saved us 30% in server costs.
-                        </div>
-                        <div class="testi-des">
-                            <h5>Carlos Mendez</h5>
-                            <span>Brazil - Web Application Development</span>
+                            <h5>Ali Azam</h5>
+                            <span>Pakistan - Custom Frontend Development</span>
                         </div>
                     </div>
                     <!-- / END SINGLE TESTIMONIALS DESIGN AREA -->
                 </div>
             </div>
-            
+
         </div>
     </section>
     <!-- / END TESTIMONIALS DESIGN AREA -->
@@ -608,67 +616,82 @@
     <!-- START VLOG DESIGN AREA -->
     <section class="blog-area">
         <div class="container">
-            <div class="row ">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="section-title wow fadeInUp delay-0-2s">
-                        <h2>Stories</h2>
-                    </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="section-title wow fadeInUp delay-0-2s">
+                    <h2>Stories</h2>
                 </div>
             </div>
-            <!-- START SINGLE VLOG DESIGN AREA -->
-            <div class="row blog-post-box align-items-center">
-                <div class="col-lg-6">
+            <div class="row">
+                <!-- </div>
+             START SINGLE VLOG DESIGN AREA 
+            <div class="row blog-post-box align-items-center"> -->
+                <div class="col-lg-6 mb-4">
                     <div class="blog-post-img">
                         <a href="#">
                             <img src="assets/images/blog/withsir.jpg" alt="Muhammad Hussain Shamim">
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-6">
                     <div class="blog-post-caption">
                         <h2><a class="link-decoration" href="#">Behind the Scenes of Saylani’s Biggest IT Exam</a></h2>
-                        <a class="theme-btn theme-btn-two" href="single-project.html?id=gtsNwBEKGKun3Kqyf4KU">Read more <i class="ri-arrow-right-line"></i></a>
+                        <a class="theme-btn theme-btn-two" href="single-project.html?id=gtsNwBEKGKun3Kqyf4KU">Read more
+                            <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
-            </div>
-            <!-- START SINGLE VLOG DESIGN AREA -->
-            <!-- START SINGLE VLOG DESIGN AREA -->
-            <div class="row blog-post-box align-items-center">
-                <div class="col-lg-6">
+                <!--</div> -->
+                <!-- START SINGLE VLOG DESIGN AREA -->
+                <!-- START SINGLE VLOG DESIGN AREA -->
+                <!-- <div class="row blog-post-box align-items-center"> -->
+                <div class="col-lg-6 mb-4">
                     <div class="blog-post-img">
                         <a href="#">
                             <img src="assets/images/blog/jamia.jfif" alt="Muhammad Hussain Shamim">
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-6">
+                
                     <div class="blog-post-caption">
                         <h2><a class="link-decoration" href="#">Naat Competition Victory at College</a></h2>
-                        <a class="theme-btn theme-btn-two" href="single-project.html?id=epup8I7mVuOu8AWK32nP">Read more <i class="ri-arrow-right-line"></i></a>
+                        <a class="theme-btn theme-btn-two" href="single-project.html?id=epup8I7mVuOu8AWK32nP">Read more
+                            <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
-            </div>
-            <!-- START SINGLE VLOG DESIGN AREA -->
-            <!-- START SINGLE VLOG DESIGN AREA -->
-            <div class="row blog-post-box align-items-center">
-                <div class="col-lg-6">
+                <!--</div> -->
+                <!-- START SINGLE VLOG DESIGN AREA -->
+                <!-- START SINGLE VLOG DESIGN AREA -->
+                <!--<div class="row blog-post-box align-items-center"> -->
+                <div class="col-lg-6 mb-4">
                     <div class="blog-post-img">
                         <a href="#">
                             <img src="assets/images/blog/irfan malik2.jpg" alt="Muhammad Hussain Shamim">
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-6">
+                
                     <div class="blog-post-caption">
-                        <h2><a class="link-decoration" href="#">I had the opportunity to connect with Irfan Malik</a></h2>
-                        <a class="theme-btn theme-btn-two" href="single-project.html?id=I6FALR3zNrQq6L9UuFjf">Read more <i class="ri-arrow-right-line"></i></a>
+                        <h2><a class="link-decoration" href="#">I had the opportunity to connect with Irfan Malik</a>
+                        </h2>
+                        <a class="theme-btn theme-btn-two" href="single-project.html?id=I6FALR3zNrQq6L9UuFjf">Read more
+                            <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="blog-post-img">
+                        <a href="#">
+                            <img src="assets/images/blog/governer.webp" alt="Muhammad Hussain Shamim">
+                        </a>
+                    </div>
+                
+                    <div class="blog-post-caption">
+                        <h2><a class="link-decoration" href="#">event At the Governor House</a>
+                        </h2>
+                        <a class="theme-btn theme-btn-two" href="single-project.html?id=SrBeSPtTyvugGBeBSUDB">Read more
+                            <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
             <!-- START SINGLE VLOG DESIGN AREA -->
-         
+
         </div>
-        <div class="col-lg-12 d-flex justify-content-center " >
+        <div class="col-lg-12 d-flex justify-content-center mt-4">
             <div class="blog-post-caption">
                 <a class="theme-btn theme-btn-two" href="./blog.html">ALL Blogs <i class="ri-arrow-right-line"></i></a>
             </div>
@@ -688,14 +711,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-content-part  wow fadeInUp delay-0-2s">
-                        <!-- START CONTACT SINGLEDESIGN AREA -->
-                        <div class="single-contact wow fadeInUp" data-wow-delay=".2s">
-                            <span class="circle-btn">
-                                <i class="ri-map-pin-line"></i>
-                            </span>
-                            <h2>our office:</h2>
-                            <p>Korangi,Karachi</p>
-                        </div>
+                       
                         <!-- / END CONTACT SINGLEDESIGN AREA -->
                         <!-- START CONTACT SINGLEDESIGN AREA -->
                         <div class="single-contact wow fadeInUp" data-wow-delay=".4s">
@@ -720,10 +736,13 @@
                             <h2>Socials</h2>
                             <div class="about-social">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/muhammadhussainshamim"><i class="ri-facebook-circle-fill"></i></a></li>
-                                   
-                                    <li><a href="https://www.linkedin.com/in/muhammadhussainshamim"><i class="ri-linkedin-fill"></i></a></li>
-                                    <li><a href="https://github.com/hussainshamim16"><i class="ri-github-line"></i></a></li>
+                                    <li><a href="https://www.facebook.com/muhammadhussainshamim"><i
+                                                class="ri-facebook-circle-fill"></i></a></li>
+
+                                    <li><a href="https://www.linkedin.com/in/muhammadhussainshamim"><i
+                                                class="ri-linkedin-fill"></i></a></li>
+                                    <li><a href="https://github.com/hussainshamim16"><i class="ri-github-line"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -733,7 +752,7 @@
                 <!-- START CONTACT FORM DESIGN AREA -->
                 <div class="col-lg-8">
                     <div class="contact-form contact-form-area wow fadeInUp delay-0-4s">
-                        <form id="contactForm" class="contact-form"  action="javascript:void(0)">
+                        <form id="contactForm" class="contact-form" action="javascript:void(0)">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -783,9 +802,11 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <p class="input-success" style="color: black;">We have received your mail, We will get back to you soon!
+                                    <p class="input-success" style="color: black;">We have received your mail, We will
+                                        get back to you soon!
                                     </p>
-                                    <p class="input-error" style="color: red;">Sorry, Message could not send! Please try again.</p>
+                                    <p class="input-error" style="color: red;">Sorry, Message could not send! Please try
+                                        again.</p>
                                 </div>
                             </div>
                         </form>
@@ -809,8 +830,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
-                    <p class="copy-left-text">Made by <a
-                            target="_blank" href="https://www.linkedin.com/in/muhammadhussainshamim/">Hussain Shamim</a></p>
+                    <p class="copy-left-text">Made by <a target="_blank"
+                            href="https://www.linkedin.com/in/muhammadhussainshamim/">Hussain Shamim</a></p>
                 </div>
                 <div class="col-lg-6 col-sm-6">
                     <p class="copy-right-text">&copy; Copyright <span id="yearx">0000</span> </p>
@@ -819,6 +840,10 @@
         </div>
     </footer>
     <!-- / END FOOTER DESIGN AREA -->
+    <!-- swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- JQUERY JS -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- BOOTSTRAP JS-->
@@ -844,11 +869,11 @@
     <!--  WOW ANIMATION JS-->
     <script src="assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
-    <script type="module" src="assets/js/script.js" ></script>
+    <script type="module" src="assets/js/script.js"></script>
     <!-- contact form setup -->
     <!-- <script src="./assets/crud/contact form/index.js" type="module"></script> -->
 
-   
+
 </body>
 
 </html>
