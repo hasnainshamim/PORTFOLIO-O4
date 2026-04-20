@@ -1437,6 +1437,9 @@ Version      : 1.0
         display: -ms-flexbox;
         display: flex;
     }
+    .portfolio-box {
+    height: 340px;
+}
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
